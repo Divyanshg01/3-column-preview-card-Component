@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root{
+
+--Bright-orange: hsl(31, 77%, 52%);
+--Dark-cyan: hsl(184, 100%, 22%);
+--Very-dark-cyan: hsl(179, 100%, 13%);
+
+--Transparent-white-p: hsla(0, 0%, 100%, 0.75);
+--Very-light-gray-bhp: hsl(0, 0%, 95%);
+
+
+font-size: 62.5%;
+
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Very-light-gray-bhp);
+    font-family: "Lexend Deca";
+    margin: 3.5rem 1rem;
+}
+main{
+    max-width: 103rem;
+
+}
+.containers{
+    display: flex;
+    
+
+}
+.container{
+    padding: 4.8rem;
+    flex-grow: 1;
+    flex-shrink: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.5rem;
+    padding-right: 6rem;
+}
+.car-type{
+    color: var(--Very-light-gray-bhp);
+    font-family:"Big Shoulders Display";
+    font-weight: 700;
+    font-size: 4rem;
+}
+.car-desc{
+color: var(--Transparent-white-p);
+}
+.one{
+    background-color: var(--Bright-orange);
+}
+.two{
+    background-color: var(--Dark-cyan);
+}
+.three{
+    background-color: var(--Very-dark-cyan);
+}
+button{
+    margin-top: 4.5rem;
+    outline: none;
+    border: 3px solid white;
+    padding: 1.3rem 2.3rem;
+    border-radius: 3rem;
+    transition: all 0.3s;
+    cursor: pointer;
+    
+}
+button:hover{
+    color: var(--Very-light-gray-bhp);
+    background-color: transparent;  
+}
+.sedan-btn{
+    color: var(--Bright-orange);
+    
+}
+
+.suvs-btn{
+    color: var(--Dark-cyan);
+}
+.luxury-btn{
+    color: var(--Very-dark-cyan);
+}
+
+@media screen and (max-width:450px) {
+    .containers{
+        flex-direction: column;
+    }
+}
+
